@@ -81,3 +81,13 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 git init
 git add .
+git commit -m "solve all of the required"
+git branch -M main
+git remote add origin https://github.com/DREAM-finder/salon_appoinement_freecodecamp.git
+git remote -v
+git remote remove origin
+git remote add origin https://github.com/DREAM-finder/salon_appoinement_freecodecamp.git
+git push -u origin main
+pg_dump -cC --inserts -U freecodecamp salon > salon.sql
+git init
+git add .
